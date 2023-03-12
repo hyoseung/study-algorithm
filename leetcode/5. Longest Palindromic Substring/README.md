@@ -1,6 +1,6 @@
 - https://leetcode.com/problems/longest-palindromic-substring/
-- Runtime: 253 ms
-- Memory Usage: 42.7 MB
+- Runtime: 242 ms
+- Memory Usage: 42.1 MB
 
 palindromic string: 뒤집어도 같은 문자
 
@@ -10,8 +10,6 @@ palindromic string: 뒤집어도 같은 문자
  * @return {string}
  */
 var longestPalindrome = function(s) {
-  if (s.length < 2) return s;
-
   const SIZE = s.length;
   let len = s.length;
 

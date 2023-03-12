@@ -3,8 +3,6 @@
  * @return {string}
  */
 var longestPalindrome = function(s) {
-  if (s.length < 2) return s;
-
   const SIZE = s.length;
   let len = s.length;
 
