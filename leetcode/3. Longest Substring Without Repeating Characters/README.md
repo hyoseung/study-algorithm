@@ -1,3 +1,8 @@
+- https://leetcode.com/problems/longest-substring-without-repeating-characters/
+- Runtime: 77 ms
+- Memory Usage: 46.1 MB
+
+```js
 /**
  * @param {string} s
  * @return {number}
@@ -23,3 +28,4 @@ var lengthOfLongestSubstring = function(s) {
 
     return output >= temp.length ? output : temp.length;
 };
+```

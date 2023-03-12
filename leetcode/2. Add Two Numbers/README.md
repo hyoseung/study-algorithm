@@ -1,3 +1,11 @@
+- https://leetcode.com/problems/add-two-numbers/
+- Runtime: 104 ms
+- Memory Usage: 47.8 MB
+
+
+ListNode를 활용도를 제대로 이해하지 못해서 헤맸다ㅎㅎ
+
+```js
 /**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
@@ -34,3 +42,4 @@
   }
   return output;
 };
+```

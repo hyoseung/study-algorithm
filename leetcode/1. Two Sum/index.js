@@ -1,9 +1,4 @@
 /**
- * Runtime: 112 ms
- * Memory Usage: 42.3 MB
- */
-
-/**
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
