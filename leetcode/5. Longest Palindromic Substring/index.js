@@ -1,6 +1,6 @@
 /**
- * Runtime: 7043 ms
- * Memory Usage: 51.4 MB
+ * Runtime: 253 ms
+ * Memory Usage: 42.7 MB
  */
 
 /**
@@ -8,38 +8,28 @@
  * @return {string}
  */
 var longestPalindrome = function(s) {
-  const arr = s.split('');
-  let output = '';
+  if (s.length < 2) return s;
 
-  if (arr.length < 2) return s;
+  const SIZE = s.length;
+  let len = s.length;
 
-  arr.forEach((element, idx) => {
-      const temp = arr.slice(idx);
-      const size = temp.length;
-      for(let i = size-1; i >= 1; i--) {
-          if(temp[i] === element) {
-              const temp2 = temp.slice(0, i+1);
-              const size2 = temp2.length;
-              if (size2 % 2 === 0) {
-                  const front = temp2.slice(0, size2/2).join('');
-                  const rear = temp2.slice(size2/2, size2).reverse().join('');
-                  if(front === rear) {
-                      output = output.length >= temp2.length ? output : temp2.join('');
-                      break;
-                  }
-              } else {
-                  const front = temp2.slice(0, parseInt(size2/2)).join('');
-                  const rear = temp2.slice(parseInt(size2/2)+1, size2).reverse().join('');
-                  if(front === rear) {
-                      output = output.length >= temp2.length ? output : temp2.join('');
-                      break;
-                  }   
-              }
-          } else {
-              output = output.length >= 1 ? output : element;
+  while(len >= 2) {
+      for(let i = 0; i <= SIZE - len; i++) {
+          let start = i;
+          let end = i + len - 1;
+          let match_count = 0;
+
+          while(start <= end && s[start] === s[end]) {
+              start++;
+              end--;
+              match_count++;
+          }
+      
+          if (Math.ceil(len / 2) === match_count) {
+              return s.slice(i, i+len);
           }
       }
-  });
-
-  return output;
+      len--;
+  }
+  return s[0];
 };

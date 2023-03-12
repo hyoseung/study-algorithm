@@ -1,6 +1,6 @@
 /**
  * Runtime: 77 ms
- * Memory Usage: 46.4 MB
+ * Memory Usage: 46.1 MB
  */
 
 /**
@@ -8,24 +8,23 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function(s) {
-  const arr = s.split('');
-  let output = 0;
-  let temp = [];
+    let output = 0;
+    let temp = [];
 
-  arr.forEach(i => {
-      if (temp.length === 0) {
-          temp.push(i);
-      } else {
-          const idx = temp.indexOf(i);
-          if (idx > -1) {
-              output = output >= temp.length ? output : temp.length;
-              temp.splice(0, idx+1);
-              temp.push(i)
-          } else {
-              temp.push(i);
-          }
-      }
-  });
+    for(let i = 0; i < s.length; i++) {
+        const element = s[i];
+        if (temp.length === 0) {
+            temp.push(element);
+        } else {
+            const idx = temp.indexOf(element);
+            if (idx > -1) {
+                output = output >= temp.length ? output : temp.length;
+                temp.splice(0, idx+1);
+            }
 
-  return output >= temp.length ? output : temp.length;
+            temp.push(element);
+        }
+    }
+
+    return output >= temp.length ? output : temp.length;
 };
