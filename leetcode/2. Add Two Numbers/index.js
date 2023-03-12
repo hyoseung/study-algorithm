@@ -1,4 +1,9 @@
 /**
+ * Runtime: 104 ms
+ * Memory Usage: 47.8 MB
+ */
+
+/**
  * Definition for singly-linked list.
  * function ListNode(val, next) {
  *     this.val = (val===undefined ? 0 : val)
