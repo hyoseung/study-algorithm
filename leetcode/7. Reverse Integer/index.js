@@ -1,19 +1,14 @@
 /**
  * @param {number} x
- * @return {boolean}
+ * @return {number}
  */
-var isPalindrome = function(x) {
-  if (x < 0) return false;
+var reverse = function(x) {
+  const isNegative = x < 0;
+  const input = (isNegative ? -x : x).toString().split('');
+  const num = Number(input.reverse().join(''));
 
-  const str = x.toString();
-  let start = 0;
-  let end = str.length - 1;
+  if (!isNegative && num > Math.pow(2, 31) -1) return 0;
+  if (isNegative && num > Math.pow(2, 31)) return 0;
 
-  while(start <= end) {
-      if (str[start] !== str[end]) return false;
-      start++;
-      end--;
-  }
-
-  return true;
+  return isNegative ? -num : num;
 };
