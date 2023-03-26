@@ -2,7 +2,10 @@
 - Runtime: 68 ms
 - Memory Usage: 44.4 MB
 
-`isNaN(' ')` &rarr; false 숫자로 인식
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
+https://on1ystar.github.io/javascript/2021/03/30/JavaScript-7/
+`isNaN(' ')` &rarr; false 숫자로 인식 (Number로 형 변환)
+`Number.isNaN(' ')` &rarr; false (오로지 NaN일때만 true, 엄격함)
 
 ```js
 /**
@@ -28,6 +31,7 @@ var myAtoi = function(s) {
         break;
     }
 
+    // +, - 판단하기 위함
     if (isNaN(output)) return 0;
 
     const num = Number(output);
