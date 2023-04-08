@@ -12,3 +12,5 @@
 - [9. Palindrome Number](leetcode/9.%20Palindrome%20Number/)
 - [11. Container With Most Water](leetcode/11.%20Container%20With%20Most%20Water/)
 - [12. Integer to Roman](leetcode/12.%20Integer%20to%20Roman/)
+- [13. Roman to Integer](leetcode/13.%20Roman%20to%20Integer/)
+- [14. Longest Common Prefix](leetcode/14.%20Longest%20Common%20Prefix/)
