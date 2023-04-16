@@ -14,3 +14,5 @@
 - [12. Integer to Roman](leetcode/12.%20Integer%20to%20Roman/)
 - [13. Roman to Integer](leetcode/13.%20Roman%20to%20Integer/)
 - [14. Longest Common Prefix](leetcode/14.%20Longest%20Common%20Prefix/)
+- [15. 3Sum](leetcode/15.%203Sum/)
+- [16. 3Sum Closest](leetcode/16.%203Sum%20Closest/)
